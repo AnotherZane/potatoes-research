@@ -1,6 +1,10 @@
 # Third-party sources: fetched by reproduce/fetch_sources.py, never committed.
 /data/
 
+# The corpus and its sidecar: rebuilt by reproduce/build_corpus.py, deterministically.
+/poly_db.sqlite
+/poly_db.json
+
 __pycache__/
 *.py[cod]
 .venv/

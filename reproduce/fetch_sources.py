@@ -1,39 +1,21 @@
-"""Download the corpus's raw sources into data/, byte-identical to the ones the thesis used.
+"""Download the corpus sources into data/ and check each against its pinned SHA-256.
 
-Fetches the inputs build_corpus.py reads.
+    uv run reproduce/fetch_sources.py            # fetch what is missing, then verify
+    uv run reproduce/fetch_sources.py --check    # verify only, no network
 
-    uv run reproduce/fetch_sources.py            # fetch missing data
-    uv run reproduce/fetch_sources.py --check    # verify data
+    data/natural_earth/   Natural Earth 1:110m Admin 0 countries, v5.1.1
+    data/fonts/           ten Google Fonts typefaces, plus licenses/
 
-    data/natural_earth/ne_110m_admin_0_countries.{shp,shx,dbf,prj,cpg}   Natural Earth 1:110m Admin 0, v5.1.1
-    data/fonts/*.ttf                                                     ten typefaces, Google Fonts
+A file is written only if its hash matches; otherwise the script stops.  Sources, in
+the order tried:
 
-EVERY FILE IS PINNED BY SHA-256.  The corpus is defined by these exact bytes: a font
-revision that moves one control point moves a glyph's vertices, and the stored exact
-optima then describe a different polygon.  So a download whose hash does not match is
-an error, never a warning, and nothing is written for it.  Upstream changing is exactly
-the case this script exists to catch.
+  fonts           versioned fonts.gstatic.com URL, then the URL the Google Fonts
+                  download list currently gives, then Zenodo
+  natural earth   nvkelso/natural-earth-vector at tag v5.1.1, then Zenodo
 
-SOURCES.
-  * Fonts: fonts.gstatic.com, at the VERSIONED URL each file was served from when the
-    corpus was pinned (`/s/arbutus/v30/...`).  A new font release gets a new URL, so the
-    pinned one keeps naming the old bytes for as long as Google keeps serving it, which
-    it has historically done for a long time, but does not promise.  If a pinned URL fails
-    or returns other bytes, the script falls back to the Google Fonts download list for the
-    ten families, whose manifest names the CURRENT URL of every file.  That succeeds only 
-    if the current file is still the pinned one; a new version there is reported as such.
-    Each family's licence (OFL.txt, or LICENSE.txt for Fontdiner Swanky) is inlined in the
-    same manifest and is written to data/fonts/licenses/<Family>/ beside the fonts.
-  * Natural Earth: raw files from the nvkelso/natural-earth-vector repository at the tag
-    v5.1.1.  The naciscdn.org zip serves the same bytes today, but it is "latest", not a
-    version; the tag cannot move.
-  * Zenodo, last for both: record 23938660 (DOI 10.5281/zenodo.23938660) holds every one
-    of these files, byte-identical, with the font licences as font-licenses.zip.  It is
-    the archival copy that keeps the corpus rebuildable if Google or GitHub stop serving
-    the pinned bytes.  The record is pinned by version, not by its concept DOI
-    (10.5281/zenodo.23938659), which would follow any later version.
+Zenodo record 23938660 (DOI 10.5281/zenodo.23938660) archives every file.
 
-Standard library only, so it runs before anything else is installed.
+Standard library only.
 """
 from __future__ import annotations
 
@@ -236,8 +218,7 @@ def fetch_fonts(dest: str, force: bool) -> None:
             continue
         _store_first(dest, name, sha, sources(name, pinned_url))
 
-    # Licences travel with the fonts (OFL 1.1 asks for it).  They are not corpus inputs,
-    # so a failure to fetch them is a warning, and an existing set is not re-fetched.
+    # Licences are not corpus inputs: a failure to fetch them is only a warning.
     lic_dir = os.path.join(dest, "licenses")
     have = os.listdir(lic_dir) if os.path.isdir(lic_dir) else []
     if not force and len(have) >= len(FONTS):
