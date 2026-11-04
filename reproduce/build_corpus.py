@@ -21,7 +21,7 @@ FONT_DEFAULTS = {"em_size": 1000, "flatten_steps": 12, "simplify_tol": 2.0}
 
 FONTS = os.path.join(DATA, "fonts")
 SHAPEFILE = os.path.join(DATA, "natural_earth", "ne_110m_admin_0_countries.shp")
-SCHEMA = os.path.join(ROOT, "database", "schema.sql")
+SCHEMA = os.path.join(ROOT, "db_schema.sql")
 CORPUS = os.path.join(ROOT, "poly_db.sqlite")
 
 # What the pinned sources produce.  Any other count means the corpus was not reproduced.
