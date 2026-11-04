@@ -1,0 +1,18 @@
+[project]
+name = "potatoes-research"
+version = "0.1.0"
+description = "Reproduction pipeline and results for the thesis 'Peeling Potatoes Exactly and Almost Exactly: Computing the Convex Skull of a Polygon'"
+readme = "README.md"
+authors = [
+    { name = "Zane Dmitri Pereira", email = "zanedpereira2@gmail.com" },
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/AnotherZane/potatoes-research"
+"Corpus sources" = "https://doi.org/10.5281/zenodo.23938660"
+
+# Not an installable package: a set of scripts under reproduce/, run with `uv run`.
+[tool.uv]
+package = false

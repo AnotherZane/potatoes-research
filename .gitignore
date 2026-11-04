@@ -1,0 +1,6 @@
+# Third-party sources: fetched by reproduce/fetch_sources.py, never committed.
+/data/
+
+__pycache__/
+*.py[cod]
+.venv/
