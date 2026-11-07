@@ -61,6 +61,12 @@ GPL-3.0-or-later; see `LICENSE`. The implementations use CGAL packages licensed 
 
 The corpus sources keep their own licences. Natural Earth is in the public domain. The fonts are under the SIL Open Font License, except Fontdiner Swanky (Apache 2.0). Their licence files are fetched into `data/fonts/licenses/`.
 
+## Third-party software
+
+The implementations are built on [CGAL](https://www.cgal.org) 6.1.1, the Computational Geometry Algorithms Library: The CGAL Project. *CGAL User and Reference Manual*. CGAL Editorial Board, 6.1.1 edition, 2026. https://doc.cgal.org/6.1.1/Manual/packages.html
+
+They also use GMP (LGPL-3.0 or GPL-2.0), MPFR (LGPL-3.0-or-later) and Boost (BSL-1.0), and the Python bindings are built with nanobind (BSD-3-Clause). The scripts use shapely, geopandas and fonttools.
+
 ## Acknowledgement
 
 Claude Opus 5.5 (Anthropic) assisted in creating this repository, including cleaning the archived code and comments, verifying correctness against the published results, updating the reproduce scripts, and creating the build environment. Any decisions, reviews and final edits are the author's.
