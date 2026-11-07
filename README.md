@@ -60,3 +60,7 @@ Refinement's search uses `cos`, `sin` and `atan2`. Its answers are always exact 
 GPL-3.0-or-later; see `LICENSE`. The implementations use CGAL packages licensed under the GPL.
 
 The corpus sources keep their own licences. Natural Earth is in the public domain. The fonts are under the SIL Open Font License, except Fontdiner Swanky (Apache 2.0). Their licence files are fetched into `data/fonts/licenses/`.
+
+## Acknowledgement
+
+Claude Opus 5.5 (Anthropic) assisted in creating this repository, including cleaning the archived code and comments, verifying correctness against the published results, updating the reproduce scripts, and creating the build environment. Any decisions, reviews and final edits are the author's.
