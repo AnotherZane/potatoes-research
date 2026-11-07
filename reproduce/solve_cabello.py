@@ -70,7 +70,7 @@ def _row(pid, name, coords, nref, sha, a_p, variant, threads, seed, status, el, 
             int(bool(res.get("edge_budget_exceeded"))))
 
 
-def _check_p1(res, pid, name):
+def _check_certificate(res, pid, name):
     """A missing certificate is NOT a pass: defaulting an unreturned convex/contained
     flag to True would let a binding regression report a violation as success."""
     if "convex" not in res or "contained" not in res:
@@ -78,7 +78,7 @@ def _check_p1(res, pid, name):
                        f"(keys: {sorted(res)[:8]})")
     cv, ct = bool(res["convex"]), bool(res["contained"])
     if not (cv and ct):
-        print(f"  P1 VIOLATION [{pid}] {name}: convex={cv} contained={ct}", flush=True)
+        print(f"  NOT CONVEX/CONTAINED [{pid}] {name}: convex={cv} contained={ct}", flush=True)
     return cv and ct
 
 
@@ -132,7 +132,7 @@ def main():
 
             if status == "ok" and res is not None:
                 total += el
-                if _check_p1(res, pid, name):
+                if _check_certificate(res, pid, name):
                     n_ok += 1
                 else:
                     n_bad += 1
@@ -151,7 +151,7 @@ def main():
         slowest.sort(reverse=True)
         done = n_ok + n_bad
         print(f"\n=== {a.variant} @ {a.threads} thread{'s' if a.threads > 1 else ''}: "
-              f"{done} completed, {n_bad} P1 violations, {n_to} timed out, {n_err} errors ===")
+              f"{done} completed, {n_bad} not convex/contained, {n_to} timed out, {n_err} errors ===")
         if done:
             print(f"  completed-solve total {total:8.1f}s   mean {total/done:6.3f}s")
         print("\nslowest completed:")
