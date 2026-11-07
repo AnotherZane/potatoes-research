@@ -1,0 +1,63 @@
+{
+ "environment": {
+  "utc": "2026-09-13T03:09:14+00:00",
+  "cpu": "AMD EPYC 9474F 48-Core Processor",
+  "cpu_count": 16,
+  "virtualised_guest": true,
+  "memory_total": "63740852 kB",
+  "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.43",
+  "python": "3.13.14",
+  "compiler": "g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+  "cmake": "cmake version 4.2.3",
+  "git_commit": "a1f34ea322daf3198ed32064c8db17588a17ea9b",
+  "git_dirty": true,
+  "argv": [
+   "research/reproduce/solve_polish.py",
+   "--from",
+   "aronov",
+   "--resume"
+  ],
+  "solver_flags": {
+   "CGT_PIVOT_GATE": null,
+   "CGT_TRY_BOTH_CASES": null,
+   "CGT_MEASURE_B9": null
+  }
+ },
+ "summary": {
+  "source": "aronov",
+  "seed_result": "solve_aronov_20260912_194204.sqlite",
+  "polygons": 555,
+  "without_seed": 0,
+  "gain": {
+   "base": {
+    "n": 555,
+    "min": 1.0008762857883178,
+    "median": 1.3893470034755526,
+    "mean": 1.5192926800125302,
+    "max": 4.061079876179559
+   },
+   "adjoin": {
+    "n": 555,
+    "min": 1.0008874731618973,
+    "median": 1.4418414547675928,
+    "mean": 1.602589851082302,
+    "max": 4.491075380756665
+   },
+   "split": {
+    "n": 555,
+    "min": 1.0009814125711858,
+    "median": 1.4891354673663542,
+    "mean": 1.6752567089999097,
+    "max": 4.453885402204322
+   },
+   "both": {
+    "n": 555,
+    "min": 1.000981412571159,
+    "median": 1.4974118884363052,
+    "mean": 1.68050252197746,
+    "max": 4.4511928475950775
+   }
+  },
+  "elapsed_s": 21897.5
+ }
+}

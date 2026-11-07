@@ -1,0 +1,35 @@
+{
+ "environment": {
+  "utc": "2026-09-13T12:01:18+00:00",
+  "cpu": "AMD EPYC 9474F 48-Core Processor",
+  "cpu_count": 16,
+  "virtualised_guest": true,
+  "memory_total": "63740852 kB",
+  "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.43",
+  "python": "3.13.14",
+  "compiler": "g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+  "cmake": "cmake version 4.2.3",
+  "git_commit": "a1f34ea322daf3198ed32064c8db17588a17ea9b",
+  "git_dirty": true,
+  "argv": [
+   "research/reproduce/analyse_cabello_feasibility.py"
+  ],
+  "solver_flags": {
+   "CGT_PIVOT_GATE": null,
+   "CGT_TRY_BOTH_CASES": null,
+   "CGT_MEASURE_B9": null
+  }
+ },
+ "summary": {
+  "paper_literal_result": "solve_cabello_paper_literal_t1_20260912_220653.sqlite",
+  "baseline_result": "solve_cabello_baseline_t1_20260912_194241.sqlite",
+  "threads": 1,
+  "attempted": 36,
+  "completed": 0,
+  "timed_out": 36,
+  "completion_rate": 0.0,
+  "blowup_median": null,
+  "blowup_max": null,
+  "elapsed_s": 0.0
+ }
+}

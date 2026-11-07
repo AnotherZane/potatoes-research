@@ -1,0 +1,99 @@
+{
+ "environment": {
+  "utc": "2026-09-14T07:33:11+00:00",
+  "cpu": "AMD EPYC 9474F 48-Core Processor",
+  "cpu_count": 16,
+  "virtualised_guest": true,
+  "memory_total": "63740852 kB",
+  "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.43",
+  "python": "3.13.14",
+  "compiler": "g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+  "cmake": "cmake version 4.2.3",
+  "git_commit": "89865940c2c35918044a0317ea66460b5505bab3",
+  "git_dirty": true,
+  "argv": [
+   "research/reproduce/analyse_polish_complexity.py"
+  ],
+  "solver_flags": {
+   "CGT_PIVOT_GATE": null,
+   "CGT_TRY_BOTH_CASES": null,
+   "CGT_MEASURE_B9": null
+  }
+ },
+ "summary": {
+  "results": {
+   "cabello": "solve_polish_from_cabello_20260913_011616.sqlite",
+   "aronov": "solve_polish_from_aronov_20260913_130914.sqlite"
+  },
+  "headline_both": {
+   "cabello": {
+    "vs_n": {
+     "predictor": "n",
+     "cut": 3,
+     "exponent": 0.552,
+     "r2": 0.1553,
+     "points": 824,
+     "x_min": 5,
+     "x_max": 555
+    },
+    "vs_seed_verts": {
+     "predictor": "seed_verts",
+     "cut": 0,
+     "exponent": 1.58,
+     "r2": 0.0878,
+     "points": 824,
+     "x_min": 5,
+     "x_max": 17
+    },
+    "vs_out_verts": {
+     "predictor": "out_verts",
+     "cut": 0,
+     "exponent": 1.768,
+     "r2": 0.7744,
+     "points": 824,
+     "x_min": 4,
+     "x_max": 42
+    },
+    "seed_min": 5,
+    "seed_max": 17,
+    "seed_median": 11,
+    "corr_seed_n": 0.0877
+   },
+   "aronov": {
+    "vs_n": {
+     "predictor": "n",
+     "cut": 3,
+     "exponent": 0.843,
+     "r2": 0.2699,
+     "points": 824,
+     "x_min": 5,
+     "x_max": 555
+    },
+    "vs_seed_verts": {
+     "predictor": "seed_verts",
+     "cut": 0,
+     "exponent": 1.817,
+     "r2": 0.5864,
+     "points": 824,
+     "x_min": 4,
+     "x_max": 42
+    },
+    "vs_out_verts": {
+     "predictor": "out_verts",
+     "cut": 0,
+     "exponent": 2.05,
+     "r2": 0.7862,
+     "points": 824,
+     "x_min": 3,
+     "x_max": 41
+    },
+    "seed_min": 4,
+    "seed_max": 42,
+    "seed_median": 8,
+    "corr_seed_n": 0.2424
+   }
+  },
+  "verdict": "polish is independent of n (elapsed ~ n^~0.5 at R^2 ~0.15); its cost is governed by the bounded convex-subset size, which does not grow with n -- hence the flat pipeline",
+  "elapsed_s": 0.2
+ }
+}

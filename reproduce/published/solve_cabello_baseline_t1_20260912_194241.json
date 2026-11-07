@@ -1,0 +1,43 @@
+{
+ "environment": {
+  "utc": "2026-09-12T09:42:41+00:00",
+  "cpu": "AMD EPYC 9474F 48-Core Processor",
+  "cpu_count": 16,
+  "virtualised_guest": true,
+  "memory_total": "63740852 kB",
+  "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.43",
+  "python": "3.13.14",
+  "compiler": "g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+  "cmake": "cmake version 4.2.3",
+  "git_commit": "49a9bc2a8f0f90060f21eff5570d8cdc59320f46",
+  "git_dirty": true,
+  "argv": [
+   "research/reproduce/solve_cabello.py",
+   "--variant",
+   "baseline",
+   "--threads",
+   "1"
+  ],
+  "solver_flags": {
+   "CGT_PIVOT_GATE": null,
+   "CGT_TRY_BOTH_CASES": null,
+   "CGT_MEASURE_B9": null
+  }
+ },
+ "summary": {
+  "variant": "baseline",
+  "threads": 1,
+  "seed": 20260911,
+  "polygons_attempted": 824,
+  "completed": 824,
+  "p1_violations": 0,
+  "timed_out": 0,
+  "errors": 0,
+  "total_solve_s": 1967.6,
+  "mean_solve_s": 2.3879,
+  "slowest_s": 40.144,
+  "capped": false,
+  "timeout_s": null,
+  "elapsed_s": 2037.8
+ }
+}

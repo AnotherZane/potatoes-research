@@ -1,0 +1,37 @@
+{
+ "environment": {
+  "utc": "2026-09-13T09:14:51+00:00",
+  "cpu": "AMD EPYC 9474F 48-Core Processor",
+  "cpu_count": 16,
+  "virtualised_guest": true,
+  "memory_total": "63740852 kB",
+  "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.43",
+  "python": "3.13.14",
+  "compiler": "g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+  "cmake": "cmake version 4.2.3",
+  "git_commit": "a1f34ea322daf3198ed32064c8db17588a17ea9b",
+  "git_dirty": true,
+  "argv": [
+   "research/reproduce/solve_upper_bound.py",
+   "--resume",
+   "--budget-hours",
+   "4"
+  ],
+  "solver_flags": {
+   "CGT_PIVOT_GATE": null,
+   "CGT_TRY_BOTH_CASES": null,
+   "CGT_MEASURE_B9": null
+  }
+ },
+ "summary": {
+  "bounded": 824,
+  "timed_out": 0,
+  "errors": 0,
+  "unsound": 0,
+  "pairs": 6,
+  "dirs": 180,
+  "rel_tol": 0.001,
+  "per_polygon_timeout_s": 1800.0,
+  "elapsed_s": 7596.6
+ }
+}

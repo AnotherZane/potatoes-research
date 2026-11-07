@@ -1,0 +1,133 @@
+{
+ "environment": {
+  "utc": "2026-09-13T21:42:23+00:00",
+  "cpu": "AMD EPYC 9474F 48-Core Processor",
+  "cpu_count": 16,
+  "virtualised_guest": true,
+  "memory_total": "63740852 kB",
+  "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.43",
+  "python": "3.13.14",
+  "compiler": "g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+  "cmake": "cmake version 4.2.3",
+  "git_commit": "a1f34ea322daf3198ed32064c8db17588a17ea9b",
+  "git_dirty": true,
+  "argv": [
+   "research/reproduce/analyse_complexity.py"
+  ],
+  "solver_flags": {
+   "CGT_PIVOT_GATE": null,
+   "CGT_TRY_BOTH_CASES": null,
+   "CGT_MEASURE_B9": null
+  }
+ },
+ "summary": {
+  "chang_and_yap_result": "solve_chang_and_yap_20260913_235551.sqlite",
+  "cabello_result": "solve_cabello_baseline_t1_20260912_194241.sqlite",
+  "fits_time": [
+   {
+    "cut": 3,
+    "exponent": 4.328,
+    "r2": 0.943,
+    "points": 545,
+    "n_min": 5,
+    "n_max": 57
+   },
+   {
+    "cut": 10,
+    "exponent": 4.365,
+    "r2": 0.9175,
+    "points": 500,
+    "n_min": 10,
+    "n_max": 57
+   },
+   {
+    "cut": 20,
+    "exponent": 4.481,
+    "r2": 0.8024,
+    "points": 371,
+    "n_min": 20,
+    "n_max": 57
+   },
+   {
+    "cut": 30,
+    "exponent": 4.681,
+    "r2": 0.6279,
+    "points": 261,
+    "n_min": 30,
+    "n_max": 57
+   }
+  ],
+  "fits_xi": [
+   {
+    "cut": 3,
+    "exponent": 1.753,
+    "r2": 0.9361,
+    "points": 545,
+    "n_min": 5,
+    "n_max": 57
+   },
+   {
+    "cut": 10,
+    "exponent": 1.743,
+    "r2": 0.9044,
+    "points": 500,
+    "n_min": 10,
+    "n_max": 57
+   },
+   {
+    "cut": 20,
+    "exponent": 1.756,
+    "r2": 0.7641,
+    "points": 371,
+    "n_min": 20,
+    "n_max": 57
+   },
+   {
+    "cut": 30,
+    "exponent": 1.842,
+    "r2": 0.5804,
+    "points": 261,
+    "n_min": 30,
+    "n_max": 57
+   }
+  ],
+  "fits_cabello_r": [
+   {
+    "cut": 3,
+    "exponent": 0.384,
+    "r2": 0.2682,
+    "points": 824,
+    "n_min": 5,
+    "n_max": 555
+   },
+   {
+    "cut": 10,
+    "exponent": 0.391,
+    "r2": 0.2239,
+    "points": 779,
+    "n_min": 10,
+    "n_max": 555
+   },
+   {
+    "cut": 20,
+    "exponent": 0.428,
+    "r2": 0.1523,
+    "points": 650,
+    "n_min": 20,
+    "n_max": 555
+   },
+   {
+    "cut": 30,
+    "exponent": 0.507,
+    "r2": 0.1455,
+    "points": 540,
+    "n_min": 30,
+    "n_max": 555
+   }
+  ],
+  "a_density_median": 0.05350579193584317,
+  "m_density_median": 0.17311249855474622,
+  "solves": 545,
+  "elapsed_s": 0.0
+ }
+}
