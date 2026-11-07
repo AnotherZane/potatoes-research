@@ -8,3 +8,12 @@
 __pycache__/
 *.py[cod]
 .venv/
+
+# Build tree
+/build/
+
+# Fresh runs of the reproduce/ scripts (published results live in reproduce/published/)
+/reproduce/results/
+
+# IDE
+.idea/

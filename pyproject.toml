@@ -1,8 +1,14 @@
+[build-system]
+requires = ["scikit-build-core>=0.9", "nanobind>=3.0"]
+build-backend = "scikit_build_core.build"
+
 [project]
 name = "potatoes-research"
 version = "0.1.0"
 description = "Reproduction pipeline and results for the thesis 'Peeling Potatoes Exactly and Almost Exactly: Computing the Convex Skull of a Polygon'"
 readme = "README.md"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
 authors = [
     { name = "Zane Dmitri Pereira", email = "zanedpereira2@gmail.com" },
 ]
@@ -17,6 +23,10 @@ dependencies = [
 Repository = "https://github.com/AnotherZane/potatoes-research"
 "Corpus sources" = "https://doi.org/10.5281/zenodo.23938660"
 
-# Not an installable package: a set of scripts under reproduce/, run with `uv run`.
-[tool.uv]
-package = false
+# Builds the thesis solvers as the `potato_peeling` extension module.
+[tool.scikit-build]
+wheel.py-api = "cp312"
+wheel.packages = []
+cmake.build-type = "Release"
+build-dir = "build/{wheel_tag}"
+sdist.exclude = ["build/", "data/", "poly_db.*"]
