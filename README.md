@@ -2,7 +2,7 @@
 
 Results, corpus pipeline and implementation code for the thesis: *Peeling Potatoes Exactly and Almost Exactly: Computing the Convex Skull of a Polygon* (Zane Dmitri Pereira, The University of Melbourne, 2026).
 
-This repository is a record of the thesis: the published results, the scripts that produced them, and the implementation code that ran, archived and checked to reproduce them exactly. The code in this repository has been trimmed to only include what was needed to reproduce published results and is licensed under [GPL-3.0-or-later](#licence). To use the implementations in your own work, use the [LGPL-3.0-or-later](https://github.com/AnotherZane/potato-peeling/blob/main/LICENSE) licensed [potato-peeling](https://github.com/AnotherZane/potato-peeling) library instead, which can also be used in proprietary and non-GPL software.
+This repository is a record of the thesis: the published results, the scripts that produced them, and the implementation code that ran, archived and checked to reproduce them exactly. The code in this repository has been trimmed to only include what was needed to reproduce published results and is licensed under [GPL-3.0-or-later](#licence). To use the implementations in your own work, use the [LGPL-3.0-or-later](https://github.com/AnotherZane/potato-peeling/blob/main/COPYING.LESSER) licensed [potato-peeling](https://github.com/AnotherZane/potato-peeling) library instead, which can also be used in proprietary and non-GPL software.
 
 ## Contents
 | | |
