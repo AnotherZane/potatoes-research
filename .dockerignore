@@ -1,0 +1,9 @@
+.git
+.idea
+.venv
+build
+data
+poly_db.sqlite
+poly_db.json
+reproduce/results
+**/__pycache__
